@@ -1,6 +1,6 @@
 # 5SEM-NLP
-Scraping file: [titlesSpider.py](spiders/titlesSpider.py) <br>
-Analysis file: [1EXERCISE.ipynb](1EXERCISE.ipynb)
+Scraping file: [titlesSpider.py](./spiders/titlesSpider.py) <br>
+Analysis file: [1EXERCISE.ipynb](./1EXERCISE.ipynb)
 
 ## V1.0
 - Scraping
