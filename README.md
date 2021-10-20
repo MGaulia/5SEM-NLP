@@ -1,4 +1,6 @@
 # 5SEM-NLP
+Scraping file: spiders/titlesSpider.py <br>
+Analysis file: 1EXERCISE.ipynb
 ## V1.0
 - Scraping
 - Pre-trained model adaptation
