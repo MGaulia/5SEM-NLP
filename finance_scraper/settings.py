@@ -30,5 +30,5 @@ FEED_EXPORTERS = {
     'csv': 'finance_scraper.exporters.CsvCustomSeperator'
 }
 
-USER_AGENT='my personal university project on natural language processing'
+USER_AGENT='my personal'
 

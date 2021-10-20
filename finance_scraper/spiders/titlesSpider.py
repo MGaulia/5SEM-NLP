@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from scrapy.crawler import CrawlerProcess
 
 class TitlesspiderSpider(scrapy.Spider):
     name = 'titlesSpider'
     # start urls are hardcoded for more fast and efficient scraping
-    start_urls = ["https://www.lse.co.uk/news/archive.html?page="+str(i) for i in range(0,1000)]
+    start_urls = ["https://www.lse.co.uk/news/archive.html?page="+str(i) for i in range(0,10)]
 
     def parse(self, response):
         if response.status == 200: # speedy filter for broken websites
@@ -16,6 +15,7 @@ class TitlesspiderSpider(scrapy.Spider):
     def parse_article(self, response):
         if response.status == 200: # speedy filter for broken websites
             title = response.xpath('//h1[@class="title__title"]/text()[1]').extract()[0]
+            date = response.xpath('//p[@class="news-article__details-date"]/text()[1]').extract()[0]
             # form a text from all parapgraph tags
             text = [
                 ' '.join(
@@ -29,5 +29,6 @@ class TitlesspiderSpider(scrapy.Spider):
             yield{
                 "title": title,
                 "article": text,
+                "date": date,
                 "url": response.url
             }
