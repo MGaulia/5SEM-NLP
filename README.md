@@ -13,3 +13,10 @@ Analysis file: [1EXERCISE.ipynb](finance_scraper/1EXERCISE.ipynb)
 ## V2
 - Integrated scraped tada to Google Assistant's dialogflow
 - Chatbot gives specific answers for different questions ex. "News about crypto?", "Tell me more about coronavirus"
+
+### Available intents:
+- Newest news
+- Oldest news
+- Crypto
+- China
+- COVID-19
